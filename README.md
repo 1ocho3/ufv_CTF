@@ -215,7 +215,8 @@ if __name__=='__main__':
     scrypt=unzip_cracker()
     scrypt.run()
 ```  
-A crackear!!!
+A crackear!!!  Recuerda introducir tu `wordlist`, tu archivo `.zip` y el scrypt `unzip_cracker.py` en una misma carpeta, y ejecuta!
+
 ![SUCCESS](https://github.com/1ocho3/ufv_CTF/blob/main/readme_required/SUCCESS.gif?raw=true) 
 
 &nbsp;
