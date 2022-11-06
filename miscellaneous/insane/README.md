@@ -17,7 +17,7 @@ Si tratamos de abrir el fichero, podemos observar un patrón de relación con lo
 ![nombres_aleatorios](https://github.com/1ocho3/ufv_CTF/blob/main/miscellaneous/insane/readme_required/sucesi%C3%B3n_nombres-aleatorios.png?raw=true)
 
 Si has probado a trastear con las contraseñas, ya te habrás topado con la característica principal de este reto.  
-A diferencia del resto, las contraseñas de estos ficheros no siguen un patrón determinado, por lo que tomarán un valor aleatorio dentro del diccionario de contraseñas [passwords-UFV-CTF.txt](https://github.com/1ocho3/ufv_CTF/blob/4793c68bbbe725a18ec5500f4f92611253a53274/files/passwords-UFV-CTF.txt)  
+A diferencia del resto, las contraseñas de estos ficheros no siguen un patrón determinado, por lo que tomarán un valor aleatorio dentro del diccionario de contraseñas [passwords-UFV-CTF.txt](https://github.com/1ocho3/ufv_CTF/blob/774c1faa27fdf86332161faf372dd477996d30e5/miscellaneous/insane/files/passwords-UFV-CTF.txt)  
 
 El reto nos anima a usar las herramientas: `JohnTheRipper` y `zip2john` para obtener las contraseñas.
 
@@ -28,7 +28,7 @@ Lo resolveremos usando `Python3` y la librería `os` para introducir conmandos e
 Antes de empezar te recomiendo que trates de analizar con perspectiva el objetivo y el camino para llegar hasta él. Sabemos lo que tenemos que hacer, y qué es lo que hay que conseguir... ¿Pero cómo vamos a llegar hasta ello?
 Necesitamos automatizar la ejecución del proceso de crackeo de contraseña y descompresión del archivo.
 
-Lo primero que haremos será crear nuestro `work-enviroment`. Crea una carpeta donde tengas todos los archivos necesarios: `ff78cee4b6a5e0bd60e795ad8ff4f3b3.zip`, [passwords-UFV-CTF.txt](https://github.com/1ocho3/ufv_CTF/blob/4793c68bbbe725a18ec5500f4f92611253a53274/files/passwords-UFV-CTF.txt), y tu `scrypt.py` que llamaremos [unzip_cracker.py](https://github.com/1ocho3/ufv_CTF/blob/4793c68bbbe725a18ec5500f4f92611253a53274/files/unzip_cracker.py)  
+Lo primero que haremos será crear nuestro `work-enviroment`. Crea una carpeta donde tengas todos los archivos necesarios: `ff78cee4b6a5e0bd60e795ad8ff4f3b3.zip`, [passwords-UFV-CTF.txt](https://github.com/1ocho3/ufv_CTF/blob/774c1faa27fdf86332161faf372dd477996d30e5/miscellaneous/insane/files/passwords-UFV-CTF.txt), y tu `scrypt.py` que llamaremos [unzip_cracker.py](https://github.com/1ocho3/ufv_CTF/blob/4793c68bbbe725a18ec5500f4f92611253a53274/files/unzip_cracker.py)  
 
 ![work_enviroment](https://github.com/1ocho3/ufv_CTF/blob/main/miscellaneous/insane/readme_required/work-envirioment.png?raw=true)  
 
