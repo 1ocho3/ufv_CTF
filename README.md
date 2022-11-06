@@ -137,7 +137,8 @@ os.system(f'mv {self.file_name()} comprimido.zip') #Modifica el nombre aleatorio
 os.system(f'unzip -P {self.crackear()} comprimido.zip') #Descomprime el archivo con la última contraseña crackeada.
 ```  
 En este punto el script está terminado y finalizaría al producirse un error cuando se descomprimiese el último `.zip,` y `flag.txt` haya sido extraido del `.zip` 
-Pero por la estrucutra de nuestro scrypt, `flag.txt` se modificaría y pasaría a llamarse `comprimido.zip`. Esto se bypasea haciendo un simple `cat` sobre `comprimido.zip` ya que por mucho `.zip` que tenga, es un mero `.txt`, el cat sobre nuestro falso zip nos daría la flag.
+Pero por la estrucutra de nuestro scrypt, `flag.txt` se modificaría y pasaría a llamarse `comprimido.zip`. Esto se bypasea haciendo un simple `cat` sobre `comprimido.zip` ya que por mucho `.zip` que tenga, es un mero `.txt`, el cat sobre nuestro falso zip nos daría la flag.  
+
 ![false_zip_file](https://github.com/1ocho3/ufv_CTF/blob/main/readme_required/false_zip_file.png?raw=true)  
 
 Para evitar esto podemos poner el broche de oro y automatizar también, la detección de `flag.txt`, y su muestreo en pantalla.
