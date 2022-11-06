@@ -33,7 +33,10 @@ Lo primero que haremos será crear nuestro `work-enviroment`. Crea una carpeta d
 
 ![work_enviroment](https://github.com/1ocho3/ufv_CTF/blob/main/miscellaneous/insane/readme_required/work-envirioment.png?raw=true)  
 
-El código resulta una secuencia sencilla de comandos que deben ser repetidos en un bucle semi-infinito. ¿Qué quiere decir esto? Puedes forzar un bucle infinito, o cuasi-infinito, que terminará inevitablemente cuando se llegue a descomprimir el último archivo y tu scrypt trate de descomprimir `flag.txt`. En cuyo caso dará error, y finalizará. Es una forma de acerlerar tu avance en el CTF pero si lo deseas puedes no ahorrarte este paso y añadir que el programa termine cuando aparezca el archivo `flag.txt` y lo imprima por pantalla. Veremos como añadir esta opción a tu código.
+<p align="justify">El código resulta una secuencia sencilla de comandos que deben ser repetidos en un bucle semi-infinito. ¿Qué quiere decir esto? Puedes forzar un bucle infinito, o cuasi-infinito, que terminará inevitablemente cuando se llegue a descomprimir el último archivo y tu scrypt trate de descomprimir</p>
+ `flag.txt`. <p align="justify">En cuyo caso dará error, y finalizará. Es una forma de acerlerar tu avance en el CTF pero si lo deseas puedes no ahorrarte este paso y añadir que el programa termine cuando aparezca el archivo</p>
+ `flag.txt`<p align="justify"> y lo imprima por pantalla. Veremos como añadir esta opción a tu código.</p>
+
 
 Lo primero es crear la clase `unzip_cracker` desde la que crearemos los metodos para resolver el reto.  
 En el método constructor introducimos todos los nombres conocidos de los archivos que necesitaremos.
