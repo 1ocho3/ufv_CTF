@@ -8,25 +8,24 @@ if __name__=='__main__':
             self.psswd='passwords-UFV-CTF.txt'
 
         def file_name(self):
-            #files=[]
             files=os.listdir()
             files.remove(self.scrp)
             files.remove(self.psswd)
             return files[0]
         
         def crackear(self):
-                os.system('rm /root/.john/john.pot') #John trouble prevention
-                os.system('clear')
-                os.system(f'zip2john {self.file_name()} > {self.h}')
-                os.system(f'john {self.h} --wordlist={self.psswd} > {self.crk}')
-                os.system(f'rm {self.h}')#hash ya no sirve ningún propósito
-                f=open(self.crk,'r')
-                lines=f.readlines()
-                lines.pop(0)
-                ps=lines[0].split(' ')
-                f.close()
-                os.system(f'rm {self.crk}')#En este punto ya no sirve propósito 
-                return ps[0]
+            os.system('rm /root/.john/john.pot') #John trouble prevention
+            os.system('clear')
+            os.system(f'zip2john {self.file_name()} > {self.h}')
+            os.system(f'john {self.h} --wordlist={self.psswd} > {self.crk}')
+            os.system(f'rm {self.h}')#hash ya no sirve ningún propósito
+            f=open(self.crk,'r')
+            lines=f.readlines()
+            lines.pop(0)
+            ps=lines[0].split(' ')
+            f.close()
+            os.system(f'rm {self.crk}')#En este punto ya no sirve propósito 
+            return ps[0]
         
         def unzip(self):
             os.system('clear')
@@ -48,4 +47,3 @@ if __name__=='__main__':
 
     scrypt=unzip_cracker()
     scrypt.run()
-
