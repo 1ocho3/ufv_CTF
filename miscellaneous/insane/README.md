@@ -25,18 +25,15 @@ Nos encontramos ante otro reto de programación.
 
 Lo resolveremos usando `Python3` y la librería `os` para introducir conmandos en el terminal.
 
-<p align="justify">Antes de empezar te recomiendo que trates de analizar con perspectiva el objetivo y el camino para llegar hasta él. Sabemos lo que tenemos que hacer, y qué es lo que hay que conseguir... ¿Pero cómo vamos a llegar hasta ello?
-Necesitamos automatizar la ejecución del proceso de crackeo de contraseña y descompresión del archivo.</p>
+Antes de empezar te recomiendo que trates de analizar con perspectiva el objetivo y el camino para llegar hasta él. Sabemos lo que tenemos que hacer, y qué es lo que hay que conseguir... ¿Pero cómo vamos a llegar hasta ello?
+Necesitamos automatizar la ejecución del proceso de crackeo de contraseña y descompresión del archivo.
 
 
 Lo primero que haremos será crear nuestro `work-enviroment`. Crea una carpeta donde tengas todos los archivos necesarios: `ff78cee4b6a5e0bd60e795ad8ff4f3b3.zip`, [passwords-UFV-CTF.txt](https://github.com/1ocho3/ufv_CTF/blob/774c1faa27fdf86332161faf372dd477996d30e5/miscellaneous/insane/files/passwords-UFV-CTF.txt), y tu `scrypt.py` que llamaremos [`unzip_cracker.py`](https://github.com/1ocho3/ufv_CTF/blob/a91f018f715c8cc976542391da955a4b4dd8a132/miscellaneous/insane/files/unzip_cracker.py)  
 
 ![work_enviroment](https://github.com/1ocho3/ufv_CTF/blob/main/miscellaneous/insane/readme_required/work-envirioment.png?raw=true)  
 
-<p align="justify">El código resulta una secuencia sencilla de comandos que deben ser repetidos en un bucle semi-infinito. ¿Qué quiere decir esto? Puedes forzar un bucle infinito, o cuasi-infinito, que terminará inevitablemente cuando se llegue a descomprimir el último archivo y tu scrypt trate de descomprimir</p>
- `flag.txt`. <p align="justify">En cuyo caso dará error, y finalizará. Es una forma de acerlerar tu avance en el CTF pero si lo deseas puedes no ahorrarte este paso y añadir que el programa termine cuando aparezca el archivo</p>
- `flag.txt`<p align="justify"> y lo imprima por pantalla. Veremos como añadir esta opción a tu código.</p>
-
+El código resulta una secuencia sencilla de comandos que deben ser repetidos en un bucle semi-infinito. ¿Qué quiere decir esto? Puedes forzar un bucle infinito, o cuasi-infinito, que terminará inevitablemente cuando se llegue a descomprimir el último archivo y tu scrypt trate de descomprimir `flag.txt`. En cuyo caso dará error, y finalizará. Es una forma de acerlerar tu avance en el CTF pero si lo deseas puedes no ahorrarte este paso y añadir que el programa termine cuando aparezca el archivo `flag.txt` y lo imprima por pantalla. Veremos como añadir esta opción a tu código.  
 
 Lo primero es crear la clase `unzip_cracker` desde la que crearemos los metodos para resolver el reto.  
 En el método constructor introducimos todos los nombres conocidos de los archivos que necesitaremos.
