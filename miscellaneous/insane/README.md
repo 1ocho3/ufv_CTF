@@ -10,11 +10,11 @@
 &nbsp;  
 El reto nos presenta un archivo comprimido `ff78cee4b6a5e0bd60e795ad8ff4f3b3.zip`  
 
-![zip_file](https://github.com/1ocho3/ufv_CTF/blob/main/readme_required/ff78cee4b6a5e0bd60e795ad8ff4f3b3.png?raw=true)
+![zip_file](https://github.com/1ocho3/ufv_CTF/blob/main/miscellaneous/insane/readme_required/ff78cee4b6a5e0bd60e795ad8ff4f3b3.png?raw=true)
 
 Si tratamos de abrir el fichero, podemos observar un patrón de relación con los retos de miscelánea anteriores. Un fichero `.zip` con nombres aleatorios, protegidos con contraseña, y que se suceden el uno al otro.
 
-![nombres_aleatorios](https://github.com/1ocho3/ufv_CTF/blob/main/readme_required/sucesi%C3%B3n_nombres-aleatorios.png?raw=true)
+![nombres_aleatorios](https://github.com/1ocho3/ufv_CTF/blob/main/miscellaneous/insane/readme_required/sucesi%C3%B3n_nombres-aleatorios.png?raw=true)
 
 Si has probado a trastear con las contraseñas, ya te habrás topado con la característica principal de este reto.  
 A diferencia del resto, las contraseñas de estos ficheros no siguen un patrón determinado, por lo que tomarán un valor aleatorio dentro del diccionario de contraseñas [passwords-UFV-CTF.txt](https://github.com/1ocho3/ufv_CTF/blob/4793c68bbbe725a18ec5500f4f92611253a53274/files/passwords-UFV-CTF.txt)  
@@ -30,7 +30,7 @@ Necesitamos automatizar la ejecución del proceso de crackeo de contraseña y de
 
 Lo primero que haremos será crear nuestro `work-enviroment`. Crea una carpeta donde tengas todos los archivos necesarios: `ff78cee4b6a5e0bd60e795ad8ff4f3b3.zip`, [passwords-UFV-CTF.txt](https://github.com/1ocho3/ufv_CTF/blob/4793c68bbbe725a18ec5500f4f92611253a53274/files/passwords-UFV-CTF.txt), y tu `scrypt.py` que llamaremos [unzip_cracker.py](https://github.com/1ocho3/ufv_CTF/blob/4793c68bbbe725a18ec5500f4f92611253a53274/files/unzip_cracker.py)  
 
-![work_enviroment](https://github.com/1ocho3/ufv_CTF/blob/main/readme_required/work-envirioment.png?raw=true)  
+![work_enviroment](https://github.com/1ocho3/ufv_CTF/blob/main/miscellaneous/insane/readme_required/work-envirioment.png?raw=true)  
 
 El código resulta una secuencia sencilla de comandos que deben ser repetidos en un bucle semi-infinito. ¿Qué quiere decir esto? Puedes forzar un bucle infinito, o cuasi-infinito, que terminará inevitablemente cuando se llegue a descomprimir el último archivo y tu scrypt trate de descomprimir `flag.txt`. En cuyo caso dará error, y finalizará. Es una forma de acerlerar tu avance en el CTF pero si lo deseas puedes no ahorrarte este paso y añadir que el programa termine cuando aparezca el archivo `flag.txt` y lo imprima por pantalla. Veremos como añadir esta opción a tu código.
 
@@ -218,10 +218,10 @@ if __name__=='__main__':
 ```  
 A crackear!!!  Recuerda introducir tu `wordlist`, tu archivo `.zip` y el scrypt `unzip_cracker.py` en una misma carpeta, y ejecuta!
 
-![SUCCESS](https://github.com/1ocho3/ufv_CTF/blob/main/readme_required/SUCCESS.gif?raw=true) 
+![SUCCESS](https://github.com/1ocho3/ufv_CTF/blob/main/miscellaneous/insane/readme_required/SUCCESS.gif?raw=true) 
 
 &nbsp;
-![FLAG.TXT](https://github.com/1ocho3/ufv_CTF/blob/main/readme_required/flag_txt.png?raw=true)
+![FLAG.TXT](https://github.com/1ocho3/ufv_CTF/blob/main/miscellaneous/insane/readme_required/flag_txt.png?raw=true)
 
 Gracias
 
