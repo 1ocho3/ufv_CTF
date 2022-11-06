@@ -34,7 +34,7 @@ Lo primero que haremos será crear nuestro `work-enviroment`. Crea una carpeta d
 
 El código resulta una secuencia sencilla de comandos que deben ser repetidos en un bucle semi-infinito. ¿Qué quiere decir esto? Puedes forzar un bucle infinito, o cuasi-infinito, que terminará inevitablemente cuando se llegue a descomprimir el último archivo y tu scrypt trate de descomprimir `flag.txt`. En cuyo caso dará error, y finalizará. Es una forma de acerlerar tu avance en el CTF pero si lo deseas puedes no ahorrarte este paso y añadir que el programa termine cuando aparezca el archivo `flag.txt` y lo imprima por pantalla. Veremos como añadir esta opción a tu código.
 
-Lo primero es crear la clase unzip_cracker desde la que crearemos los metodos para resolver el reto.  
+Lo primero es crear la clase `unzip_cracker` desde la que crearemos los metodos para resolver el reto.  
 En el método constructor introducimos todos los nombres conocidos de los archivos que necesitaremos.
 ```python
 if __name__=='__main__':
