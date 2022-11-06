@@ -8,7 +8,7 @@
 &nbsp;  
 #### MISCELLANEOUS -- **INSANE**  
 &nbsp;  
-El reto nos presenta un archivo comprimido [`ff78cee4b6a5e0bd60e795ad8ff4f3b3.zip`](https://github.com/1ocho3/ufv_CTF/blob/15b6f1eb908a6023000a8efbb9e619e964de6656/miscellaneous/insane/files/ff78cee4b6a5e0bd60e795ad8ff4f3b3.zip)  
+<p align="justify">El reto nos presenta un archivo comprimido [`ff78cee4b6a5e0bd60e795ad8ff4f3b3.zip`](https://github.com/1ocho3/ufv_CTF/blob/15b6f1eb908a6023000a8efbb9e619e964de6656/miscellaneous/insane/files/ff78cee4b6a5e0bd60e795ad8ff4f3b3.zip) </p>  
 
 ![zip_file](https://github.com/1ocho3/ufv_CTF/blob/main/miscellaneous/insane/readme_required/ff78cee4b6a5e0bd60e795ad8ff4f3b3.png?raw=true)
 
