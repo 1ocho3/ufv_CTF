@@ -109,7 +109,6 @@ Loaded 1 password hash (PKZIP [32/64])
 11111111
 ```
 Con lo que nuestra función `crackear`, aunando todo, resulta en el siguiente método:
-###### `rm /root/.john/john.pot` elimina el historial de john. Al trabajar repetidamente con archivos con el mismo nombre, john puede dar problemas.
 ```python
 def crackear(self):
     os.system('rm /root/.john/john.pot') #John trouble prevention
@@ -124,7 +123,9 @@ def crackear(self):
     f.close()
     os.system(f'rm {self.crk}')#En este punto ya no sirve propósito 
     return ps[0]
-```  
+```
+###### `rm /root/.john/john.pot` elimina el historial de john. Al trabajar repetidamente con archivos con el mismo nombre, john puede dar problemas.  
+
 Solo queda descomprimir el archivo con la contraseña que ya conocemos.
 Para especficar una contraseña, `unzip` requiere el parámetro `-P`:
 ```Brainfuck
