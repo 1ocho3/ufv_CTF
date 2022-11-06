@@ -60,7 +60,7 @@ Te habrás dado cuenta, de que no hemos eliminado `self.h` ni `self.crk` de la l
 Siguiente paso. JohnTheRipper necesita un 'intérprete' que exprese los archivos `.zip` en un formato legible para john, esto se hace con `zip2john` de la siguiente forma:
 
 ```Brainfuck
-~$ zip2john file.zip > hash
+zip2john file.zip > hash
 ``` 
 Que expresado en nuestro scrypt queda así:
 
@@ -71,7 +71,7 @@ os.system(f'zip2john {self.file_name()} > {self.h}')
 Una vez sacado el hash debemos crackearlo con nuestro diccionario. En el terminal se ejecuta de la siguiente forma:
 
 ```Brainfuck
-~$ john hash --wordlist=passwords-UFV-CTF.txt > crackeado.txt
+john hash --wordlist=passwords-UFV-CTF.txt > crackeado.txt
 ```
 
 Representado en python así:
@@ -129,7 +129,7 @@ def crackear(self):
 Solo queda descomprimir el archivo con la contraseña que ya conocemos.
 Para especficar una contraseña, `unzip` requiere el parámetro `-P`:
 ```Brainfuck
-~$ unzip -P V3ryStr0ngP4ssw0rd_1 comprimido.zip
+unzip -P V3ryStr0ngP4ssw0rd_1 comprimido.zip
 ```  
 Lo traducimos a python:
 ```python
